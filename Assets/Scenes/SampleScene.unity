@@ -5351,30 +5351,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0de50b36f6eb924197a3c5b98406d25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseInput: {x: 0, y: 0}
-  p1: 0
+  playerInput: {fileID: 0}
+  isPlayer1: 0
   upperBody: {fileID: 117547506}
   Camera: {fileID: 1490647012}
   shootPointRight: {fileID: 2083780874}
   shootPointLeft: {fileID: 1318374273}
   bulletPrefab: {fileID: 4888376183214292315, guid: 4067be4bb9eabaf45853b48fe7f65731, type: 3}
   sight: {fileID: 1351742152}
-  xSens: 100
-  ySens: 20
+  forceMagnitude: 0
+  rotationSpeed: 100
+  linearDrag: 0
+  angularDrag: 0
+  lookSensitivity: 100
   rateOfFire: 0.25
-  canShoot: 1
-  shift: 304
   maxFuel: 100
   decayRate: 20
   currentFuel: 0
   JetPackPower: 2000
-  fuelBar: {fileID: 0}
-  flames: []
   dashPower: 3229
   dashCd: 1
-  axises: {x: 0, y: 0}
   enemy: {fileID: 0}
-  rotRocket: {fileID: 469231415}
   rocketPrefab: {fileID: 4888376183214292315, guid: 2c666793a2aadc740897379e9838a9d3, type: 3}
   rocketShootPoints:
   - {fileID: 111580791}
@@ -5388,16 +5385,14 @@ MonoBehaviour:
   - {fileID: 1573896875}
   - {fileID: 1282612695}
   rocketQ: 10
-  canFireRockets: 1
-  isFiringRockets: 0
   rocketFireRate: 0.2
   rocketFireDuration: 3
-  RocketcD: 10
-  rocketStartUp: 0.45
-  forceMagnitude: 0
-  torqueMagnitude: 0
-  linearDrag: 0
-  angularDrag: 0
+  rocketCooldown: 3
+  rocketStartup: 0.5
+  gravityMultiplier: 2
+  health: {fileID: 0}
+  rocketIcon: {fileID: 0}
+  fuel: {fileID: 0}
 --- !u!114 &1202230473
 MonoBehaviour:
   m_ObjectHideFlags: 0

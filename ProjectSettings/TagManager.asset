@@ -8,6 +8,8 @@ TagManager:
   - Bullets P2
   - Rockets P1
   - Rockets P2
+  - bullet
+  - rocket
   layers:
   - Default
   - TransparentFX

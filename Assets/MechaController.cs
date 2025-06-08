@@ -78,18 +78,18 @@ public class MechaController : MonoBehaviour
     public float gravityMultiplier = 2f;
 
     [Header("UI")]
-    public TextMeshProUGUI health;
     public GameObject rocketIcon;
     public TextMeshProUGUI fuel;
 
+
     void Awake()
     {
-        
+
         rb = GetComponent<Rigidbody>();
         playerInput = GetComponent<PlayerInput>();
         currentFuel = maxFuel;
 
-        
+
         moveAction = playerInput.actions["Move"];
         lookAction = playerInput.actions["Look"];
         fireAction = playerInput.actions["Fire"];
@@ -114,8 +114,6 @@ public class MechaController : MonoBehaviour
         ApplySimulatedGravity();
         RotateCabin();
         Aim();
-        UI();
-
         if (isFiring) GatlingGuns();
         if (isJumping) JetPack();
         if (isDashing) TryDash();
@@ -125,10 +123,6 @@ public class MechaController : MonoBehaviour
             StartCoroutine(RechargeFuel());
     }
 
-    private void UI()
-    {
-        
-    }
 
     private void MechaMovement()
     {
@@ -211,7 +205,7 @@ public class MechaController : MonoBehaviour
         canFireRockets = false;
         gameObject.GetComponent<Animator>().SetTrigger("Rockets");
         yield return new WaitForSeconds(rocketStartup);
-       
+
         for (int i = 0; i < rocketQ; i++)
         {
             var firedRocket = Instantiate(rocketPrefab, rocketShootPoints[i].transform.position, rocketShootPoints[i].transform.rotation);
